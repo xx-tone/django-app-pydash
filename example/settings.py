@@ -120,4 +120,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+# SITE_ROOT = os.path.dirname(BASE_DIR)
+SITE_ROOT = BASE_DIR
+STATIC_ROOT = os.path.join(SITE_ROOT, 'collect_static')
+
 STATIC_URL = '/static/'
+STATICFILES = os.path.join(BASE_DIR, 'static')
+
+TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+DATE_TIME_FORMAT = '%Y-%m-%d'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)

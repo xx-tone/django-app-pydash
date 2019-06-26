@@ -1,2 +1,2 @@
-django>=2
-gunicorn>19.3
+django==2.0.12
+gunicorn==19.3.0
